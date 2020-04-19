@@ -1,0 +1,90 @@
+@import "../_shared/scss/variables";
+
+.alert {
+  padding: 1.5rem 1rem;
+  margin: 0 0 1rem 0;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  align-items: flex-start;
+
+  .alert-icon,
+  .alert-message {
+    line-height: 22px;
+    vertical-align: middle;
+  }
+
+  .alert-icon {
+    flex: 0 0 18px;
+  }
+
+  .alert-message {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0 0.25rem;
+    word-break: break-all;
+  }
+
+  .alert-dismiss {
+    flex: 0 0 22px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    cursor: pointer;
+  }
+
+  &.alert-primary {
+    background: lighten($primary, 20%);
+    color: darken($primary, 10%);
+
+    .alert-dismiss:hover {
+      color: darken($primary, 30%);
+    }
+  }
+
+  &.alert-secondary {
+    background: lighten($secondary, 20%);
+    color: darken($secondary, 20%);
+
+    .alert-dismiss:hover {
+      color: darken($secondary, 30%);
+    }
+  }
+
+  &.alert-success {
+    background: lighten($success, 20%);
+    color: darken($success, 20%);
+
+    .alert-dismiss:hover {
+      color: darken($success, 30%);
+    }
+  }
+
+  &.alert-info {
+    background: lighten($info, 20%);
+    color: darken($info, 20%);
+
+    .alert-dismiss:hover {
+      color: darken($info, 30%);
+    }
+  }
+
+  &.alert-warning {
+    background: lighten($warning, 20%);
+    color: darken($warning, 20%);
+
+    .alert-dismiss:hover {
+      color: darken($warning, 30%);
+    }
+  }
+
+  &.alert-danger {
+    background: lighten($danger, 20%);
+    color: darken($danger, 20%);
+
+    .alert-dismiss:hover {
+      color: darken($danger, 30%);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<div class="alert" *ngIf="visible" [ngClass]="type" [@showHide]>
+  <span class="alert-icon" *ngIf="iconClass" [ngClass]="iconClass"></span>
+  <p class="alert-message">{{ message }}</p>
+  <span class="alert-dismiss" *ngIf="dismissible" (click)="dismiss()">&times;</span>
+</div>
