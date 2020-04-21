@@ -1,0 +1,40 @@
+@import '../_shared/scss/variables';
+
+.progress-bar {
+  position: fixed;
+  background: transparent;
+  height: 8px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+
+  .progress-bar-fill {
+    height: 100%;
+    transition: width 500ms;
+
+    &.progress-bar-fill-primary {
+      background: $primary;
+    }
+
+    &.progress-bar-fill-secondary {
+      background: $secondary;
+    }
+
+    &.progress-bar-fill-success {
+      background: $success;
+    }
+
+    &.progress-bar-fill-info {
+      background: $info;
+    }
+
+    &.progress-bar-fill-warning {
+      background: $warning;
+    }
+
+    &.progress-bar-fill-danger {
+      background: $danger;
+    }
+  }
+}

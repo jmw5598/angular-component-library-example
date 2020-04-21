@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AlertModule } from 'foo';
+import { ProgressBarModule } from 'foo';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    AlertModule
+    AlertModule,
+    ProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

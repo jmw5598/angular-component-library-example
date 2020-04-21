@@ -1,14 +1,6 @@
 <div class="container">
   <div>
     <foo-alert
-      [type]="AT.DANGER"
-      [visible]="true"
-      [message]="'This is a danger alert'"
-      [dismissible]="true">
-    </foo-alert>
-  </div>
-  <div>
-    <foo-alert
       [type]="alertType"
       [visible]="alertIsVisible"
       [message]="alertMessage"
@@ -17,3 +9,4 @@
     </foo-alert>
   </div>
 </div>
+<foo-progress-bar [fill]="ProgressBarFill.DANGER"></foo-progress-bar>

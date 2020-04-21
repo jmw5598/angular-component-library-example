@@ -47,5 +47,6 @@ export class AlertComponent {
 
   public dismiss(): void {
     this.isVisible = !this.isVisible;
+    this.visibleChange.emit(this.isVisible);
   }
 }
