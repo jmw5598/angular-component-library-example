@@ -1,6 +1,6 @@
 <div class="progress-bar">
   <div class="progress-bar-fill" 
     [ngClass]="fill" 
-    [ngStyle]="{ width: progressValue + '%' }">
+    [ngStyle]="{ width: (progressValue$ | async) + '%' }">
   </div>
 </div>
