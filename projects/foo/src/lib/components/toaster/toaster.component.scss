@@ -1,0 +1,100 @@
+@import '../_shared/scss/variables';
+
+.toaster {
+  position: fixed;
+  z-index: 200;
+  min-width: 300px;
+  max-width: 300px;
+
+  .toast-message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: $border-radius;
+    word-break: break-all;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.toast-primary {
+      background: lighten($primary, 20%);
+      color: darken($primary, 10%);
+    }
+
+    &.toast-secondary {
+      background: lighten($secondary, 20%);
+      color: darken($secondary, 10%);
+    }
+
+    &.toast-success {
+      background: lighten($success, 20%);
+      color: darken($success, 10%);
+    }
+
+    &.toast-info {
+      background: lighten($info, 20%);
+      color: darken($info, 10%);
+    }
+
+    &.toast-warning {
+      background: lighten($warning, 20%);
+      color: darken($warning, 10%);
+    }
+
+    &.toast-danger {
+      background: lighten($danger, 20%);
+      color: darken($danger, 10%);
+    }
+  }
+  
+  &.toaster-top-left {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    top: 0;
+    left: 0;
+  }
+
+  &.toaster-top-center {
+    margin-top: 1rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.toaster-top-right {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    top: 0;
+    right: 0;
+  }
+
+  &.toaster-bottom-left {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    bottom: 0;
+    left: 0;
+  }
+
+  &.toaster-bottom-center {
+    margin-bottom: 1rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.toaster-bottom-right {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 478px) {
+  .toaster {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}

@@ -1,12 +1,11 @@
 <div class="container">
   <div>
-    <foo-alert
-      [type]="alertType"
-      [visible]="alertIsVisible"
-      [message]="alertMessage"
-      [iconClass]="alertIconClass"
-      [dismissible]="alertIsDismissible">
-    </foo-alert>
+    <button (click)="sendToast(ToastType.PRIMARY)">Primary</button>
+    <button (click)="sendToast(ToastType.SECONDARY)">Secondary</button>
+    <button (click)="sendToast(ToastType.SUCCESS)">Success</button>
+    <button (click)="sendToast(ToastType.INFO)">Info</button>
+    <button (click)="sendToast(ToastType.WARNING)">Warning</button>
+    <button (click)="sendToast(ToastType.DANGER)">Danger</button>
   </div>
 </div>
-<foo-progress-bar [fill]="ProgressBarFill.DANGER"></foo-progress-bar>
+<foo-toaster [position]="ToasterPosition.BOTTOM_LEFT"></foo-toaster>
