@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { take } from 'rxjs/operators';
-import { ToasterPosition, ToastType, ToasterService } from 'foo';
+
+import { CardType } from 'foo';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +8,10 @@ import { ToasterPosition, ToastType, ToasterService } from 'foo';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public ToasterPosition = ToasterPosition;
-  public ToastType = ToastType;
+  public CardType = CardType;
 
-  constructor(private _toasterService: ToasterService) {}
+  constructor() {}
 
   ngOnInit() {
-  }
-
-  public sendToast(type: ToastType) {
-    this._toasterService.toast("This is a test", type);
   }
 }

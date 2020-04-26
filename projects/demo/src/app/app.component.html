@@ -1,11 +1,39 @@
-<div class="container">
-  <div>
-    <button (click)="sendToast(ToastType.PRIMARY)">Primary</button>
-    <button (click)="sendToast(ToastType.SECONDARY)">Secondary</button>
-    <button (click)="sendToast(ToastType.SUCCESS)">Success</button>
-    <button (click)="sendToast(ToastType.INFO)">Info</button>
-    <button (click)="sendToast(ToastType.WARNING)">Warning</button>
-    <button (click)="sendToast(ToastType.DANGER)">Danger</button>
-  </div>
+<div style="width: 500px; margin: 2rem;">
+  <foo-card [type]="CardType.BLANK">
+    <foo-card-header>
+      <h1>Hello</h1>
+    </foo-card-header>
+    <foo-card-body>
+      <p>Testing</p>
+    </foo-card-body>
+    <foo-card-footer>
+      <p>Footer</p>
+    </foo-card-footer>
+  </foo-card>
 </div>
-<foo-toaster [position]="ToasterPosition.BOTTOM_LEFT"></foo-toaster>
+<div style="width: 500px; margin: 2rem;">
+  <foo-card [type]="CardType.DEFAULT">
+    <foo-card-header>
+      <h1>Hello</h1>
+    </foo-card-header>
+    <foo-card-body>
+      <p>Testing</p>
+    </foo-card-body>
+    <foo-card-footer>
+      <p>Footer</p>
+    </foo-card-footer>
+  </foo-card>
+</div>
+<div style="width: 500px; margin: 2rem;">
+  <foo-card [type]="CardType.PRIMARY">
+    <foo-card-header>
+      <h1>Hello</h1>
+    </foo-card-header>
+    <foo-card-body>
+      <p>Testing</p>
+    </foo-card-body>
+    <foo-card-footer>
+      <p>Footer</p>
+    </foo-card-footer>
+  </foo-card>
+</div>

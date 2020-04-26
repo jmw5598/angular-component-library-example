@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { ToasterModule } from 'foo';
+import { CardModule } from 'foo';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ToasterModule
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

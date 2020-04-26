@@ -1,0 +1,67 @@
+@import '../_shared/scss/variables';
+
+:host ::ng-deep .card {
+  background: $card-background;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  foo-card-header,
+  foo-card-body,
+  foo-card-footer {
+    padding: 1rem;
+  }
+
+  foo-card-body {
+    flex-grow: 1;
+  }
+
+  &.card-default {
+    border: 2px solid $default;
+    foo-card-header {
+      border-bottom: 2px dashed $default;
+    }
+  }
+
+  &.card-primary {
+    border: 2px solid $primary;
+    foo-card-header {
+      border-bottom: 2px dashed $primary;
+    }
+  }
+
+  &.card-secondary {
+    border: 2px solid $secondary;
+    foo-card-header {
+      border-bottom: 2px dashed $secondary;
+    }
+  }
+
+  &.card-success {
+    border: 2px solid $success;
+    foo-card-header {
+      border-bottom: 2px dashed $success;
+    }
+  }
+
+  &.card-info {
+    border: 2px solid $info;
+    foo-card-header {
+      border-bottom: 2px dashed $info;
+    }
+  }
+
+  &.card-warning {
+    border: 2px solid $warning;
+    foo-card-header {
+      border-bottom: 2px dashed $warning;
+    }
+  }
+
+  &.card-danger {
+    border: 2px solid $danger;
+    foo-card-header {
+      border-bottom: 2px dashed $danger;
+    }
+  }
+}
