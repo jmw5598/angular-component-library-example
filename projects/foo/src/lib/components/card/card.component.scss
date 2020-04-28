@@ -1,10 +1,13 @@
 @import '../_shared/scss/variables';
+@import '../_shared/scss//mixins';
 
 :host ::ng-deep .card {
+  box-sizing: border-box;
   background: $card-background;
   display: flex;
   flex-direction: column;
   height: 100%;
+  @include box-shadow;
   
   foo-card-header,
   foo-card-body,
