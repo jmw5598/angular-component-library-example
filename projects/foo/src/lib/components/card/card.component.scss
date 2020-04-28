@@ -1,6 +1,7 @@
 @import '../_shared/scss/variables';
 
 :host ::ng-deep .card {
+  box-sizing: border-box;
   background: $card-background;
   display: flex;
   flex-direction: column;

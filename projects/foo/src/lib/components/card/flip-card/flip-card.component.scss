@@ -1,0 +1,67 @@
+@import '../../_shared/scss/mixins';
+
+:host ::ng-deep .flip-card {
+  display: block;
+  position: relative;
+  perspective: 1000px;
+  background: transparent;
+  
+  .flip-card-inner {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    @include box-shadow;
+    
+    .flip-card-front,
+    .flip-card-back {
+      flex: 1;
+      
+      .flip-button {
+        cursor: pointer;
+        position: absolute;
+        right: 0rem;
+        bottom: 0rem;
+        transform: rotate(225deg);
+        z-index: 10 !important;
+      }
+
+      foo-card {
+        flex-grow: 1;
+      }
+    }
+    
+    .flip-card-front {
+      @include backface-visibility(visible);
+      transition: opacity 0s 0.2s;
+      margin-right: -50%;
+    }
+    
+    .flip-card-back {
+      @include backface-visibility(hidden);
+      transform: rotateY(180deg);
+      margin-left: -50%;
+    }
+  }
+
+  &.flipped {
+    .flip-card-inner {
+      transform: rotateY(180deg);
+      
+      .flip-card-front {
+        opacity: 0;
+        transition: opacity 0s 0.2s;
+        @include backface-visibility(hidden);
+
+        .flip-button {
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+
+      .flip-card-back {
+        @include backface-visibility(visible);
+      }
+    }
+  }
+}

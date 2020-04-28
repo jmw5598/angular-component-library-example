@@ -1,39 +1,30 @@
-<div style="width: 500px; margin: 2rem;">
-  <foo-card [type]="CardType.BLANK">
-    <foo-card-header>
-      <h1>Hello</h1>
-    </foo-card-header>
-    <foo-card-body>
-      <p>Testing</p>
-    </foo-card-body>
-    <foo-card-footer>
-      <p>Footer</p>
-    </foo-card-footer>
-  </foo-card>
-</div>
-<div style="width: 500px; margin: 2rem;">
-  <foo-card [type]="CardType.DEFAULT">
-    <foo-card-header>
-      <h1>Hello</h1>
-    </foo-card-header>
-    <foo-card-body>
-      <p>Testing</p>
-    </foo-card-body>
-    <foo-card-footer>
-      <p>Footer</p>
-    </foo-card-footer>
-  </foo-card>
-</div>
-<div style="width: 500px; margin: 2rem;">
-  <foo-card [type]="CardType.PRIMARY">
-    <foo-card-header>
-      <h1>Hello</h1>
-    </foo-card-header>
-    <foo-card-body>
-      <p>Testing</p>
-    </foo-card-body>
-    <foo-card-footer>
-      <p>Footer</p>
-    </foo-card-footer>
-  </foo-card>
+<div style="width: 500px; display: block;">
+  <foo-flip-card>
+    <foo-front-card>
+      <foo-card [type]="CardType.DANGER">
+        <foo-card-header>
+          <h1>Front</h1>
+        </foo-card-header>
+        <foo-card-body>
+          <p>Testing</p>
+        </foo-card-body>
+        <foo-card-footer>
+          <p>Footer</p>
+        </foo-card-footer>
+      </foo-card>
+    </foo-front-card>
+    <foo-back-card>
+      <foo-card [type]="CardType.DEFAULT">
+        <foo-card-header>
+          <h1>Back</h1>
+        </foo-card-header>
+        <foo-card-body>
+          <p>Testing</p>
+        </foo-card-body>
+        <foo-card-footer>
+          <p>Footer</p>
+        </foo-card-footer>
+      </foo-card>
+    </foo-back-card>
+  </foo-flip-card>
 </div>

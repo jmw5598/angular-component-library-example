@@ -5,6 +5,9 @@ import { CardComponent } from './card.component';
 import { CardBodyComponent } from './card-body.component';
 import { CardFooterComponent } from './card-footer.component';
 import { CardHeaderComponent } from './card-header.component';
+import { FlipCardComponent } from './flip-card/flip-card.component';
+import { BackCardComponent } from './shared/back-card/back-card.component';
+import { FrontCardComponent } from './shared/front-card/front-card.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +15,9 @@ import { CardHeaderComponent } from './card-header.component';
     CardBodyComponent,
     CardFooterComponent,
     CardHeaderComponent,
+    FlipCardComponent,
+    BackCardComponent,
+    FrontCardComponent,
   ],
   imports: [
     CommonModule
@@ -20,7 +26,10 @@ import { CardHeaderComponent } from './card-header.component';
     CardComponent,
     CardBodyComponent,
     CardFooterComponent,
-    CardHeaderComponent
+    CardHeaderComponent,
+    FlipCardComponent,
+    BackCardComponent,
+    FrontCardComponent,
   ]
 })
 export class CardModule { }
