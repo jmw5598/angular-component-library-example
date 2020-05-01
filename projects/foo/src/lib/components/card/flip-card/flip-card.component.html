@@ -1,4 +1,4 @@
-<div class="flip-card" [class.flipped]="isFlipped">
+<div class="flip-card" [ngClass]="flipAxis" [class.flipped]="isFlipped">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <ng-content select="foo-front-card"></ng-content>

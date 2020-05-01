@@ -39,15 +39,12 @@
     
     .flip-card-back {
       @include backface-visibility(hidden);
-      transform: rotateY(180deg);
       margin-left: -50%;
     }
   }
 
   &.flipped {
     .flip-card-inner {
-      transform: rotateY(180deg);
-      
       .flip-card-front {
         opacity: 0;
         transition: opacity 0s 0.2s;
@@ -61,6 +58,38 @@
 
       .flip-card-back {
         @include backface-visibility(visible);
+      }
+    }
+  }
+  
+  &.flipped {
+    &.flip-axis-x {
+      .flip-card-inner {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  &.flipped {
+    &.flip-axis-y {
+      .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  &.flip-axis-x {
+    .flip-card-inner {
+      .flip-card-back {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  &.flip-axis-y {
+    .flip-card-inner {
+      .flip-card-back {
+        transform: rotateY(180deg);
       }
     }
   }

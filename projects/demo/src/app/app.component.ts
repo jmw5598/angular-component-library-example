@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CardType } from 'foo';
+import { CardType, FlipAxis } from 'foo';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,7 @@ import { CardType } from 'foo';
 })
 export class AppComponent implements OnInit {
   public CardType = CardType;
+  public FlipAxis = FlipAxis;
 
   constructor() {}
 

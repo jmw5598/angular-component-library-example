@@ -24,6 +24,7 @@ export * from './card/card-body.component';
 export * from './card/card-footer.component';
 export * from './card/card-header.component';
 export * from './card/card-type.enum';
+export * from './card/flip-card/flip-axis.enum';
 export * from './card/flip-card/flip-card.component';
 export * from './card/shared/back-card/back-card.component';
 export * from './card/shared/front-card/front-card.component';
