@@ -28,3 +28,9 @@ export * from './card/flip-card/flip-axis.enum';
 export * from './card/flip-card/flip-card.component';
 export * from './card/shared/back-card/back-card.component';
 export * from './card/shared/front-card/front-card.component';
+
+// Overlay Loader
+export * from './overlay-loader/overlay-loader.component';
+export * from './overlay-loader/overlay-loader.module';
+export * from './overlay-loader/spinner-size.enum';
+export * from './overlay-loader/overlay-style.enum';
