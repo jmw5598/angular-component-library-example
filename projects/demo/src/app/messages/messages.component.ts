@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { OverlaySidePanelService } from 'foo';
 
-import { SpinnerSize, OverlayLoaderStyle } from 'foo';
+import { MessagesSidePanelComponent } from './components/messages-side-panel/messages-side-panel.component';
 
 @Component({
   selector: 'app-messages',
@@ -8,16 +9,13 @@ import { SpinnerSize, OverlayLoaderStyle } from 'foo';
   styleUrls: ['./messages.component.scss']
 })
 export class MessagesComponent implements OnInit {
-  public SpinnerSize = SpinnerSize;
-  public OverlayLoaderStyle = OverlayLoaderStyle;
 
-  public isLoading: boolean = true;
-
-  constructor() {
-    setTimeout(() => this.isLoading = false, 2000);
-  }
+  constructor(
+    private _overlaySidePanelService: OverlaySidePanelService
+  ) {}
 
   ngOnInit(): void {
+    this._overlaySidePanelService.setContent(MessagesSidePanelComponent);
   }
 
 }

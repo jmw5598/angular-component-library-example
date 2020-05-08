@@ -5,9 +5,10 @@ import { MessagesRoutingModule } from './messages-routing.module';
 import { MessagesComponent } from './messages.component';
 
 import { OverlayLoaderModule } from 'foo';
+import { MessagesSidePanelComponent } from './components/messages-side-panel/messages-side-panel.component';
 
 @NgModule({
-  declarations: [MessagesComponent],
+  declarations: [MessagesComponent, MessagesSidePanelComponent],
   imports: [
     CommonModule,
     MessagesRoutingModule,

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { CardModule, OverlayLoaderModule } from 'foo';
+import { CardModule, OverlayLoaderModule, OverlaySidePanelModule } from 'foo';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -15,7 +15,8 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     CardModule,
-    OverlayLoaderModule
+    OverlayLoaderModule,
+    OverlaySidePanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

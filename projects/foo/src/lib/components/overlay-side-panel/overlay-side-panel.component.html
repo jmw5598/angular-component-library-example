@@ -1,0 +1,13 @@
+<div class="overlay-side-panel" [class.collapsed]="!isPanelVisible">
+  <div class="overlay overlay-style-dim-dark" 
+    *ngIf="isPanelVisible" [@fadeInOut] (click)="close()">
+  </div>
+  <div class="side-panel">
+    <div class="close">
+      <span (click)="close()">&times;</span>
+    </div>
+    <div class="content">
+      <ng-container #content></ng-container>
+    </div>
+  </div>
+</div>

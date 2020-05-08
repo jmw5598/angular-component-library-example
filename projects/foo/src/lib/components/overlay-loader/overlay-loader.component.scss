@@ -7,7 +7,7 @@
 }
 
 @mixin generate-overlay-style($color, $spinner, $track) {
-  background: $color;
+  background: $color;_
   .spinner {
     .spinner-inner{
       border-color: $track;

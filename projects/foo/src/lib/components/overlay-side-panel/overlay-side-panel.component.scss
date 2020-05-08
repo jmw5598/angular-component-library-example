@@ -1,0 +1,65 @@
+@import '../_shared/scss/variables';
+@import '../_shared/scss/mixins';
+
+.overlay-side-panel {
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &.overlay-style-transparent {
+      background: transparent;
+    }
+
+    &.overlay-style-dim-dark {
+      background: rgba(#000, 0.3);
+    }
+
+    &.overlay-style-dim-light {
+      background: rgba(#FFF, 0.5);
+    }
+  }
+  
+  .side-panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 450px;
+    margin-right: 0;
+    background: $card-background;
+    overflow-y: scroll;
+    transition: margin-right 0.3s;
+    @include box-shadow;
+
+    .close,
+    .content {
+      padding: 1.25rem;
+    }  
+
+    .close {
+      background: $card-background;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      line-height: 1rem;
+      font-size: 2rem;
+      
+      span {
+        cursor: pointer;
+        color: #888;
+        &:hover {
+          color: #292929;
+        }
+      }
+    }
+  }
+
+  &.collapsed {
+    .side-panel {
+      margin-right: -450px;
+    }
+  }
+}

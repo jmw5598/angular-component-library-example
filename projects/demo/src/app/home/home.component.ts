@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { OverlaySidePanelService } from 'foo';
 
-import { SpinnerSize, OverlayLoaderStyle } from 'foo';
+import { HomeSidePanelComponent } from './components/home-side-panel/home-side-panel.component';
 
 @Component({
   selector: 'app-home',
@@ -8,16 +9,12 @@ import { SpinnerSize, OverlayLoaderStyle } from 'foo';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public SpinnerSize = SpinnerSize;
-  public OverlayLoaderStyle = OverlayLoaderStyle;
 
-  public isLoading: boolean = true;
-
-  constructor() {
-    setTimeout(() => this.isLoading = false, 2000);
-  }
+  constructor(
+    private _overlaySidePanelService: OverlaySidePanelService
+  ) {}
 
   ngOnInit(): void {
+    this._overlaySidePanelService.setContent(HomeSidePanelComponent);
   }
-
 }

@@ -34,3 +34,8 @@ export * from './overlay-loader/overlay-loader.component';
 export * from './overlay-loader/overlay-loader.module';
 export * from './overlay-loader/spinner-size.enum';
 export * from './overlay-loader/overlay-loader-style.enum';
+
+// Overlay Side Panel
+export * from './overlay-side-panel/overlay-side-panel.component';
+export * from './overlay-side-panel/overlay-side-panel.module';
+export * from './overlay-side-panel/overlay-side-panel.service';

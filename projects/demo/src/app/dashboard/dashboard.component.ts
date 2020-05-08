@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { OverlaySidePanelService } from 'foo';
 
-import { SpinnerSize, OverlayLoaderStyle } from 'foo';
+import { DashboardSidePanelComponent } from './components/dashboard-side-panel/dashboard-side-panel.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,16 +9,12 @@ import { SpinnerSize, OverlayLoaderStyle } from 'foo';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  public SpinnerSize = SpinnerSize;
-  public OverlayLoaderStyle = OverlayLoaderStyle;
-
-  public isLoading: boolean = true;
-
-  constructor() {
-    setTimeout(() => this.isLoading = false, 2000);
-  }
+  
+  constructor(
+    private _overlaySidePanelService: OverlaySidePanelService
+  ) {}
 
   ngOnInit(): void {
+    this._overlaySidePanelService.setContent(DashboardSidePanelComponent);
   }
-
 }
