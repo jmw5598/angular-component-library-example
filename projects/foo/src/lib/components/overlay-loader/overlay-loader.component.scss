@@ -24,7 +24,7 @@
 .page-loader {
   position: relative;
 
-  .page-loader-overlay {
+  .overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -58,7 +58,7 @@
       }
     }
 
-    &.page-overlay-transparent {
+    &.overlay-loader-style-transparent {
       background: transparent;
       .spinner {
         .spinner-inner{
@@ -67,41 +67,41 @@
         }
       }
     }
-    &.page-overlay-dim-dark {
+    &.overlay-loader-style-dim-dark {
       @include generate-overlay-style(
         rgba(#000, 0.7), $primary, darken(#FFF, 20%));
     }
-    &.page-overlay-dim-light {
+    &.overlay-loader-style-dim-light {
       @include generate-overlay-style(
         rgba(#FFF, 0.7), $primary, lighten($primary, 20%));
     }
     
-    &.page-overlay-primary {
+    &.overlay-loader-style-primary {
       @include generate-overlay-style(
         $primary, darken($primary, 10%), lighten($primary, 20%));
     }
 
-    &.page-overlay-secondary {
+    &.overlay-loader-style-secondary {
       @include generate-overlay-style(
         $secondary, darken($secondary, 10%), lighten($secondary, 20%));
     }
 
-    &.page-overlay-success {
+    &.overlay-loader-style-success {
       @include generate-overlay-style(
         $success, darken($success, 10%), lighten($success, 20%));
     }
 
-    &.page-overlay-info {
+    &.overlay-loader-style-info {
       @include generate-overlay-style(
         $info, darken($info, 10%), lighten($info, 20%));
     }
 
-    &.page-overlay-warning {
+    &.overlay-loader-style-warning {
       @include generate-overlay-style(
         $warning, darken($warning, 10%), lighten($warning, 20%));
     }
 
-    &.page-overlay-danger {
+    &.overlay-loader-style-danger {
       @include generate-overlay-style(
         $danger, darken($danger, 10%), lighten($danger, 20%));
     }    

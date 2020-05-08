@@ -33,4 +33,4 @@ export * from './card/shared/front-card/front-card.component';
 export * from './overlay-loader/overlay-loader.component';
 export * from './overlay-loader/overlay-loader.module';
 export * from './overlay-loader/spinner-size.enum';
-export * from './overlay-loader/overlay-style.enum';
+export * from './overlay-loader/overlay-loader-style.enum';

@@ -1,5 +1,5 @@
-<div class="page-loader"><!-- animation will go on here, query to loader and conetnt, show hide base on isLoading-->
-  <div class="page-loader-overlay" [@fadeInOut] *ngIf="isLoading" [ngClass]="overlayStyle">
+<div class="page-loader">
+  <div class="overlay" [@fadeInOut] *ngIf="isLoading" [ngClass]="overlayStyle">
     <div class="spinner">
       <div class="spinner-inner" [ngClass]="spinnerSize"></div>
     </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SpinnerSize, OverlayStyle } from 'foo';
+import { SpinnerSize, OverlayLoaderStyle } from 'foo';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { SpinnerSize, OverlayStyle } from 'foo';
 })
 export class HomeComponent implements OnInit {
   public SpinnerSize = SpinnerSize;
-  public OverlayStyle = OverlayStyle;
+  public OverlayLoaderStyle = OverlayLoaderStyle;
 
   public isLoading: boolean = true;
 
