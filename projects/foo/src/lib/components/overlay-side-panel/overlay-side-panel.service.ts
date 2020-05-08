@@ -23,12 +23,10 @@ export class OverlaySidePanelService {
   }
 
   public setContent(content: Type<any>): void {
-    console.log("setting content");
     this._contentChangeSource.next(content);
   }
 
   public show(): void {
-    console.log("showing panel");
     this._isPanelVisible = true;
     this._closePanelSource.next(this._isPanelVisible);
   }

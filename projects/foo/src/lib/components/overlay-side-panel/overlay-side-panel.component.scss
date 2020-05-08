@@ -66,3 +66,11 @@
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .overlay-side-panel {
+    .side-panel {
+      width: 100%;
+    }
+  }
+}
