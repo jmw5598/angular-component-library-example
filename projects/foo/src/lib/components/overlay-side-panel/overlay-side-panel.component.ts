@@ -1,10 +1,11 @@
 import { 
-  Component, OnInit, OnDestroy, Type, ComponentFactoryResolver, 
+  Component, OnInit, OnDestroy, Input, Type, ComponentFactoryResolver, 
   ViewChild, ViewContainerRef, ComponentFactory } from '@angular/core';
 import { Subject, pipe } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 import { OverlaySidePanelService } from './overlay-side-panel.service';
+import { OverlaySidePanelStyle } from './overlay-side-panel-style.enum';
 import { FADE_IN_OUT } from '../_shared/animations/fade-in-out.animation';
 
 @Component({
@@ -17,6 +18,9 @@ export class OverlaySidePanelComponent implements OnInit, OnDestroy {
   @ViewChild('content', { read: ViewContainerRef }) 
   public panelContentRef: ViewContainerRef;
 
+  @Input()
+  public overlayStyle: OverlaySidePanelStyle
+
   public isPanelVisible: boolean;
 
   private _sidePanelServiceSubject$: Subject<void>;
@@ -26,12 +30,14 @@ export class OverlaySidePanelComponent implements OnInit, OnDestroy {
     private _overlaySidePanelService: OverlaySidePanelService
   ) { 
     this._sidePanelServiceSubject$ = new Subject<void>();
+    this.overlayStyle = OverlaySidePanelStyle.DIM_DARK;
   }
 
   ngOnInit(): void {
     this._overlaySidePanelService.onPanelVibilityChange()
       .pipe(takeUntil(this._sidePanelServiceSubject$))
       .subscribe((visible: boolean) => {
+        console.log('showing panel in component');
         this.isPanelVisible = visible;
       });
 
@@ -45,6 +51,7 @@ export class OverlaySidePanelComponent implements OnInit, OnDestroy {
   }
 
   private _setPanelContent(component: Type<any>) {
+    console.log("updateing panel content");
     const componentFactory: ComponentFactory<any> = this._componentFactoryResolver.resolveComponentFactory(component);
     this.panelContentRef.clear();
     this.panelContentRef.createComponent(componentFactory);

@@ -4,17 +4,17 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
-import { OverlayLoaderModule } from 'foo';
+import { OverlaySidePanelModule } from 'foo';
 import { DashboardSidePanelComponent } from './components/dashboard-side-panel/dashboard-side-panel.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    OverlayLoaderModule
+    OverlaySidePanelModule
   ],
   entryComponents: [
     DashboardSidePanelComponent

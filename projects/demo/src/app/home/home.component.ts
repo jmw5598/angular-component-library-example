@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { OverlaySidePanelService } from 'foo';
 
 import { HomeSidePanelComponent } from './components/home-side-panel/home-side-panel.component';
@@ -8,13 +8,17 @@ import { HomeSidePanelComponent } from './components/home-side-panel/home-side-p
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
 
   constructor(
     private _overlaySidePanelService: OverlaySidePanelService
   ) {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this._overlaySidePanelService.setContent(HomeSidePanelComponent);
+  }
+
+  public show(): void {
+    this._overlaySidePanelService.show();
   }
 }

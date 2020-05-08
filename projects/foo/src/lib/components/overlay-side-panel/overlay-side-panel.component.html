@@ -1,5 +1,6 @@
 <div class="overlay-side-panel" [class.collapsed]="!isPanelVisible">
-  <div class="overlay overlay-style-dim-dark" 
+  <div class="overlay" 
+    [ngClass]="overlayStyle" 
     *ngIf="isPanelVisible" [@fadeInOut] (click)="close()">
   </div>
   <div class="side-panel">

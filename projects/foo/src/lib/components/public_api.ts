@@ -39,3 +39,4 @@ export * from './overlay-loader/overlay-loader-style.enum';
 export * from './overlay-side-panel/overlay-side-panel.component';
 export * from './overlay-side-panel/overlay-side-panel.module';
 export * from './overlay-side-panel/overlay-side-panel.service';
+export * from './overlay-side-panel/overlay-side-panel-style.enum';

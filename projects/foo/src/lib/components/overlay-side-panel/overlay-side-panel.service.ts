@@ -1,9 +1,7 @@
 import { Injectable, Type } from '@angular/core';
 import { BehaviorSubject, Subject, Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class OverlaySidePanelService {
   private _isPanelVisible: boolean;
   private _closePanelSource: BehaviorSubject<boolean>;
@@ -25,17 +23,17 @@ export class OverlaySidePanelService {
   }
 
   public setContent(content: Type<any>): void {
+    console.log("setting content");
     this._contentChangeSource.next(content);
   }
 
   public show(): void {
-    console.log("showing panel in server");
+    console.log("showing panel");
     this._isPanelVisible = true;
     this._closePanelSource.next(this._isPanelVisible);
   }
 
   public close(): void {
-    console.log("closing panel in service");
     this._isPanelVisible = false;
     this._closePanelSource.next(this._isPanelVisible);
   }

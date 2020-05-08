@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
-import { OverlayLoaderModule } from 'foo';
+import { OverlaySidePanelModule } from 'foo';
 import { HomeSidePanelComponent } from './components/home-side-panel/home-side-panel.component';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { HomeSidePanelComponent } from './components/home-side-panel/home-side-p
   imports: [
     CommonModule,
     HomeRoutingModule,
-    OverlayLoaderModule
+    OverlaySidePanelModule
   ],
   entryComponents: [
     HomeSidePanelComponent

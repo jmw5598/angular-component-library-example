@@ -8,6 +8,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 100;
 
     &.overlay-style-transparent {
       background: transparent;
@@ -30,8 +31,9 @@
     width: 450px;
     margin-right: 0;
     background: $card-background;
-    overflow-y: scroll;
+    overflow-y: auto;
     transition: margin-right 0.3s;
+    z-index: 101;
     @include box-shadow;
 
     .close,
@@ -46,6 +48,7 @@
       z-index: 2;
       line-height: 1rem;
       font-size: 2rem;
+      font-weight: bold;
       
       span {
         cursor: pointer;

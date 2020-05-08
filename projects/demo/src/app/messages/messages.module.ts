@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MessagesRoutingModule } from './messages-routing.module';
 import { MessagesComponent } from './messages.component';
 
-import { OverlayLoaderModule } from 'foo';
+import { OverlaySidePanelModule } from 'foo';
 import { MessagesSidePanelComponent } from './components/messages-side-panel/messages-side-panel.component';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { MessagesSidePanelComponent } from './components/messages-side-panel/mes
   imports: [
     CommonModule,
     MessagesRoutingModule,
-    OverlayLoaderModule
+    OverlaySidePanelModule
   ]
 })
 export class MessagesModule { }

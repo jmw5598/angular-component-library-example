@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { OverlaySidePanelService } from 'foo';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +6,8 @@ import { OverlaySidePanelService } from 'foo';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(
-    private _overlaySidePanelService: OverlaySidePanelService
-  ) {}
+  constructor() {}
 
   ngOnInit() {
-  }
-
-  public show(): void {
-    this._overlaySidePanelService.show();
   }
 }
