@@ -69,11 +69,11 @@
     }
     &.overlay-loader-style-dim-dark {
       @include generate-overlay-style(
-        rgba(#000, 0.7), $primary, darken(#FFF, 20%));
+        rgba(#000, 0.3), $primary, darken(#FFF, 20%));
     }
     &.overlay-loader-style-dim-light {
       @include generate-overlay-style(
-        rgba(#FFF, 0.7), $primary, lighten($primary, 20%));
+        rgba(#FFF, 0.5), $primary, lighten($primary, 20%));
     }
     
     &.overlay-loader-style-primary {
