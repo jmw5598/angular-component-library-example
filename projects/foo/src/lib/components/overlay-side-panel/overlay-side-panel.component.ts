@@ -36,10 +36,7 @@ export class OverlaySidePanelComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this._overlaySidePanelService.onPanelVibilityChange()
       .pipe(takeUntil(this._sidePanelServiceSubject$))
-      .subscribe((visible: boolean) => {
-        console.log('showing panel in component');
-        this.isPanelVisible = visible;
-      });
+      .subscribe((visible: boolean) => this.isPanelVisible = visible);
 
     this._overlaySidePanelService.onContentChange()
       .pipe(takeUntil(this._sidePanelServiceSubject$))
@@ -51,7 +48,6 @@ export class OverlaySidePanelComponent implements OnInit, OnDestroy {
   }
 
   private _setPanelContent(component: Type<any>) {
-    console.log("updateing panel content");
     const componentFactory: ComponentFactory<any> = this._componentFactoryResolver.resolveComponentFactory(component);
     this.panelContentRef.clear();
     this.panelContentRef.createComponent(componentFactory);
