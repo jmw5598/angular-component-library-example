@@ -1,0 +1,56 @@
+@import '../_shared/scss/variables';
+@import '../_shared/scss/mixins';
+
+@mixin generate-button-solid($color) {
+  background: $color;
+  border: 2px solid $color;
+
+  &:hover {
+    background: darken($color, 10%);
+    border: 2px solid darken($color, 10%);
+  }
+
+  &:active {
+    background: darken($color, 12%);
+    border: 2px solid darken($color, 12%);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background: lighten($color, 15%);
+    border: 2px solid lighten($color, 10%);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+@mixin generate-solid-buttons {
+  &.button-style-solid {
+    &.button-color-default {
+      @include generate-button-solid(lighten($default, 10%));
+    }
+
+    &.button-color-primary {
+      @include generate-button-solid(lighten($primary, 20%));
+    }
+    &.button-color-secondary {
+      @include generate-button-solid(lighten($secondary, 10%));
+    }
+
+    &.button-color-success {
+      @include generate-button-solid(lighten($success, 10%));
+    }
+
+    &.button-color-info {
+      @include generate-button-solid(lighten($info, 10%));
+    }
+
+    &.button-color-warning {
+      @include generate-button-solid(lighten($warning, 10%));
+    }
+
+    &.button-color-danger {
+      @include generate-button-solid(lighten($danger, 10%));
+    }
+  }
+}

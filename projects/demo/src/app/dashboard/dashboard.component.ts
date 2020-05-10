@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { OverlaySidePanelService } from 'foo';
+import { OverlaySidePanelService, ButtonShape, ButtonStyle, ButtonSize, ButtonColor } from 'foo';
 
 import { DashboardSidePanelComponent } from './components/dashboard-side-panel/dashboard-side-panel.component';
 
@@ -9,6 +9,10 @@ import { DashboardSidePanelComponent } from './components/dashboard-side-panel/d
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements AfterViewInit {
+  public ButtonColor = ButtonColor;
+  public ButtonSize = ButtonSize;
+  public ButtonStyle = ButtonStyle;
+  public ButtonShape = ButtonShape;
   
   constructor(
     private _overlaySidePanelService: OverlaySidePanelService

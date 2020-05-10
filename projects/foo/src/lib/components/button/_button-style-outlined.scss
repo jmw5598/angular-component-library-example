@@ -1,0 +1,50 @@
+@import '../_shared/scss/variables';
+@import '../_shared/scss/mixins';
+
+@mixin generate-button-bordered($color, $border) {
+  border: 2px $border $color;
+  background: $card-background;
+  color: darken($color, 10%);
+
+  &:hover {
+    border-color: darken($color, 10%);
+  }
+
+  &:active {
+    border-color: darken($color, 15%);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    border-color: lighten($color, 15%);
+    color: lighten($color, 15%);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+@mixin generate-outlined-buttons {
+  &.button-style-outlined {
+    &.button-color-default {
+      @include generate-button-bordered(lighten($default, 10%), solid)
+    }
+    &.button-color-primary {
+      @include generate-button-bordered(lighten($primary, 10%), solid)
+    }
+    &.button-color-secondary {
+      @include generate-button-bordered(lighten($secondary, 10%), solid)
+    }
+    &.button-color-success {
+      @include generate-button-bordered(lighten($success, 10%), solid)
+    }
+    &.button-color-info {
+      @include generate-button-bordered(lighten($info, 10%), solid)
+    }
+    &.button-color-warning {
+      @include generate-button-bordered(lighten($warning, 10%), solid)
+    }
+    &.button-color-danger {
+      @include generate-button-bordered(lighten($danger, 10%), solid)
+    }
+  }
+}

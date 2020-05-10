@@ -1,5 +1,12 @@
-<div>
+<div style="margin: 2rem;">
   <h1>Dashboard</h1>
-  <button (click)="show()">Show Dashboard Details</button>
+  <div style="margin-top: 2rem;">
+    <button fooButton 
+      [color]="ButtonColor.SUCCESS" 
+      [shape]="ButtonShape.PILLED"
+      [style]="ButtonStyle.OUTLINED"
+      [size]="ButtonSize.LARGE"
+      (click)="show()">Show Dashboard Details</button>
+  </div>
 </div>
 <foo-overlay-side-panel></foo-overlay-side-panel>

@@ -1,0 +1,13 @@
+@mixin generate-shaped-buttons {
+  &.button-shape-squared {
+    border-radius: 0;
+  }
+
+  &.button-shape-rounded {
+    border-radius: 4px;
+  }
+
+  &.button-shape-pilled {
+    border-radius: 3rem;
+  }
+}
