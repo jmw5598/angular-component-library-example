@@ -5,6 +5,7 @@
   position: relative;
   perspective: 1000px;
   background: transparent;
+  height: 100%;
   
   .flip-card-inner {
     display: flex;
@@ -27,21 +28,19 @@
       }
 
       foo-card {
+        height: 100%;
         flex-grow: 1;
       }
     }
     
     .flip-card-front {
       @include backface-visibility(visible);
-      opacity: 1;
       transition: opacity 0s 0.2s;
       margin-right: -50%;
     }
     
     .flip-card-back {
       @include backface-visibility(hidden);
-      opacity: 0;
-      transition: opacity 0s 0.2s;
       margin-left: -50%;
     }
   }
@@ -50,16 +49,16 @@
     .flip-card-inner {
       .flip-card-front {
         opacity: 0;
+        transition: opacity 0s 0.2s;
         @include backface-visibility(hidden);
 
         .flip-button {
-          opacity: 1;
+          opacity: 0;
           z-index: -1;
         }
       }
 
       .flip-card-back {
-        opacity: 1;
         @include backface-visibility(visible);
       }
     }
