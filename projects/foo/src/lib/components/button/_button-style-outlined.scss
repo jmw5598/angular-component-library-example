@@ -4,14 +4,17 @@
 @mixin generate-button-bordered($color, $border) {
   border: 2px $border $color;
   background: $card-background;
-  color: darken($color, 10%);
+  color: $color;
+  transition: background 0.3s, color 0.3s, border 0.3s;
 
   &:hover {
-    border-color: darken($color, 10%);
+    color: $card-background;
+    background: $color;
   }
 
   &:active {
-    border-color: darken($color, 15%);
+    border-color: darken($color, 10%);
+    background: darken($color, 10%);
     box-shadow: none;
   }
 
@@ -26,25 +29,25 @@
 @mixin generate-outlined-buttons {
   &.button-style-outlined {
     &.button-color-default {
-      @include generate-button-bordered(lighten($default, 10%), solid)
+      @include generate-button-bordered($default, solid)
     }
     &.button-color-primary {
-      @include generate-button-bordered(lighten($primary, 10%), solid)
+      @include generate-button-bordered($primary, solid)
     }
     &.button-color-secondary {
-      @include generate-button-bordered(lighten($secondary, 10%), solid)
+      @include generate-button-bordered($secondary, solid)
     }
     &.button-color-success {
-      @include generate-button-bordered(lighten($success, 10%), solid)
+      @include generate-button-bordered($success, solid)
     }
     &.button-color-info {
-      @include generate-button-bordered(lighten($info, 10%), solid)
+      @include generate-button-bordered($info, solid)
     }
     &.button-color-warning {
-      @include generate-button-bordered(lighten($warning, 10%), solid)
+      @include generate-button-bordered($warning, solid)
     }
     &.button-color-danger {
-      @include generate-button-bordered(lighten($danger, 10%), solid)
+      @include generate-button-bordered($danger, solid)
     }
   }
 }

@@ -27,30 +27,30 @@
 @mixin generate-solid-buttons {
   &.button-style-solid {
     &.button-color-default {
-      @include generate-button-solid(lighten($default, 10%));
+      @include generate-button-solid($default);
     }
 
     &.button-color-primary {
-      @include generate-button-solid(lighten($primary, 20%));
+      @include generate-button-solid($primary);
     }
     &.button-color-secondary {
-      @include generate-button-solid(lighten($secondary, 10%));
+      @include generate-button-solid($secondary);
     }
 
     &.button-color-success {
-      @include generate-button-solid(lighten($success, 10%));
+      @include generate-button-solid($success);
     }
 
     &.button-color-info {
-      @include generate-button-solid(lighten($info, 10%));
+      @include generate-button-solid($info);
     }
 
     &.button-color-warning {
-      @include generate-button-solid(lighten($warning, 10%));
+      @include generate-button-solid($warning);
     }
 
     &.button-color-danger {
-      @include generate-button-solid(lighten($danger, 10%));
+      @include generate-button-solid($danger);
     }
   }
 }
