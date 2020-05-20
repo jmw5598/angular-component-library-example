@@ -1,5 +1,5 @@
 @import '../_shared/scss/variables';
-@import '../_shared/scss//mixins';
+@import '../_shared/scss/mixins';
 
 :host ::ng-deep .card {
   box-sizing: border-box;
@@ -20,51 +20,51 @@
   }
 
   &.card-default {
-    border: 2px solid $default;
     foo-card-header {
-      border-bottom: 2px dashed $default;
+      color: $card-background;
+      background: $default;
     }
   }
 
   &.card-primary {
-    border: 2px solid $primary;
     foo-card-header {
-      border-bottom: 2px dashed $primary;
+      color: $card-background;
+      background: $primary;
     }
   }
 
   &.card-secondary {
-    border: 2px solid $secondary;
     foo-card-header {
-      border-bottom: 2px dashed $secondary;
+      color: $card-background;
+      background: $secondary;
     }
   }
 
   &.card-success {
-    border: 2px solid $success;
     foo-card-header {
-      border-bottom: 2px dashed $success;
+      color: $card-background;
+      background: $success;
     }
   }
 
   &.card-info {
-    border: 2px solid $info;
     foo-card-header {
-      border-bottom: 2px dashed $info;
+      color: $card-background;
+      background: $info;
     }
   }
 
   &.card-warning {
-    border: 2px solid $warning;
     foo-card-header {
-      border-bottom: 2px dashed $warning;
+      color: $card-background;
+      background: $warning;
     }
   }
 
   &.card-danger {
-    border: 2px solid $danger;
     foo-card-header {
-      border-bottom: 2px dashed $danger;
+      color: $card-background;
+      background: $danger;
     }
   }
 }
