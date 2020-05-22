@@ -1,0 +1,39 @@
+@import '../_shared/scss/variables';
+@import '../_shared/scss/mixins';
+@import './toggle-switch-shapes';
+@import './toggle-switch-sizes';
+@import './toggle-switch-colors';
+
+.toggle-switch {
+  display: inline-block;
+  @include generate-toggle-switch-colors;
+  @include generate-toggle-switch-shapes;
+  @include generate-toggle-switch-sizes;
+
+  label {
+    display: inline-block;
+    background: $default;
+    position: relative;
+    transition: background 0.2s;
+    cursor: pointer;
+
+    &::before {
+      display: inline-block;
+      position: absolute;
+      content: ' ';
+      background: $card-background;
+      vertical-align: middles;
+      top: 3px;
+      left: 3px;
+      transition: left 0.2s;
+      @include box-shadow;
+    }
+
+    &.disabled {
+      background: lighten($default, 20%);
+      &::before {
+        box-shadow: none;
+      }
+    }
+  }
+}

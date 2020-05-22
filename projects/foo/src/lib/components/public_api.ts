@@ -48,3 +48,11 @@ export * from './button/button-shape.enum';
 export * from './button/button-size.enum';
 export * from './button/button-style.enum';
 export * from './button/button-color.enum';
+
+// Toggle Switch
+export * from './toggle-switch/toggle-switch-color.enum';
+export * from './toggle-switch/toggle-switch-shape.enum';
+export * from './toggle-switch/toggle-switch-size.enum';
+export * from './toggle-switch/toggle-switch.component'
+export * from './toggle-switch/toggle-switch.module';
+

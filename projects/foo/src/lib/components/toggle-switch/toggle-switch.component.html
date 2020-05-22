@@ -1,0 +1,6 @@
+<div class="toggle-switch" [ngClass]="classes">
+  <label 
+    (click)="toggleChecked()" 
+    [ngClass]="{ 'checked' : isChecked, 'disabled': disabled }">
+  </label>
+</div>

@@ -1,0 +1,24 @@
+@import '../_shared/scss/variables';
+
+@mixin create-toggle-switch-shape($radius) {
+  label {
+    border-radius: $radius;
+    &::before {
+      border-radius: $radius;
+    }
+  }
+}
+
+@mixin generate-toggle-switch-shapes {
+  &.toggle-switch-shape-squared {
+    @include create-toggle-switch-shape(0);
+  }
+
+  &.toggle-switch-shape-rounded {
+    @include create-toggle-switch-shape(4px);
+  }
+
+  &.toggle-switch-shape-pilled {
+    @include create-toggle-switch-shape(3rem);
+  }
+}

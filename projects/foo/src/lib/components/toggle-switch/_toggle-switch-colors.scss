@@ -1,0 +1,37 @@
+@import '../_shared/scss/variables';
+
+@mixin create-toggle-switch-color($color) {
+  label {
+    &.checked {
+      &:not(.disabled) {
+        background: $color
+      }
+    }
+  }
+}
+
+@mixin generate-toggle-switch-colors {
+  &.toggle-switch-color-primary {
+    @include create-toggle-switch-color($primary);
+  }
+
+  &.toggle-switch-color-secondary {
+    @include create-toggle-switch-color($secondary);
+  }
+
+  &.toggle-switch-color-success {
+    @include create-toggle-switch-color($success)
+  }
+
+  &.toggle-switch-color-info {
+    @include create-toggle-switch-color($info)
+  }
+
+  &.toggle-switch-color-warning {
+    @include create-toggle-switch-color($warning)
+  }
+
+  &.toggle-switch-color-danger {
+    @include create-toggle-switch-color($danger)
+  }
+}
