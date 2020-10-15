@@ -31,7 +31,7 @@ export class ToggleSwitchComponent {
     }
   }
   
-  protected isChecked: boolean;
+  public isChecked: boolean;
 
   constructor() {
     this.disabled = false;

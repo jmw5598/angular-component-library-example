@@ -1,0 +1,54 @@
+@import '../_shared/scss/variables';
+
+@mixin generate-toggle-switch-sizes {
+  &.toggle-switch-size-small {
+    label {
+      width: 42px;
+      height: 22px;
+      &::before {
+        width: 16px;
+        height: 16px;
+        line-height: 32px;
+      }
+      &.checked {
+        &::before {
+          left: 23px;
+        }
+      }
+    }
+  }
+
+  &.toggle-switch-size-medium {
+    label {
+      width: 62px;
+      height: 32px;
+      &::before {
+        width: 26px;
+        height: 26px;
+        line-height: 32px;  
+      }
+      &.checked {
+        &::before {
+          left: 33px;
+        }
+      }
+    }
+  }
+
+  &.toggle-switch-size-large {
+    label {
+      width: 82px;
+      height: 42px;
+      &::before {
+        width: 36px;
+        height: 36px;
+        line-height: 32px;  
+      }
+      &.checked {
+        &::before {
+          left: 43px;
+        }
+      }
+    }
+  }
+}

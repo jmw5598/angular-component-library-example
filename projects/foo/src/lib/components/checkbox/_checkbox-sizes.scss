@@ -1,0 +1,30 @@
+@import '../_shared/scss/variables';
+
+@mixin create-checkbox-size($checkbox-size, $font-size) {
+  .checkbox {
+    width: $checkbox-size;
+    height:  $checkbox-size;
+    font-size:  $font-size;
+    .checkmark {
+      line-height: $checkbox-size;
+    }
+  }
+  .checkbox-label {
+    font-size: $font-size;
+    line-height: $checkbox-size;
+  }
+}
+
+@mixin generate-checkbox-sizes {
+  &.checkbox-size-small {
+    @include create-checkbox-size(22px, 1rem);
+  }
+
+  &.checkbox-size-medium {
+    @include create-checkbox-size(32px, 1.2rem);
+  }
+
+  &.checkbox-size-large {
+    @include create-checkbox-size(42px, 1.5rem);
+  }
+}

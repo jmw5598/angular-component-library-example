@@ -1,7 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { OverlaySidePanelService, ButtonShape, ButtonStyle, ButtonSize, ButtonColor } from 'foo';
-
-import { DashboardSidePanelComponent } from './components/dashboard-side-panel/dashboard-side-panel.component';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { CheckboxColor, CheckboxLabelPosition, CheckboxShape, CheckboxSize } from 'foo';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,20 +8,19 @@ import { DashboardSidePanelComponent } from './components/dashboard-side-panel/d
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements AfterViewInit {
-  public ButtonColor = ButtonColor;
-  public ButtonSize = ButtonSize;
-  public ButtonStyle = ButtonStyle;
-  public ButtonShape = ButtonShape;
-  
-  constructor(
-    private _overlaySidePanelService: OverlaySidePanelService
-  ) {}
+  public CheckboxColor = CheckboxColor;
+  public CheckboxLabelPosition = CheckboxLabelPosition;
+  public CheckboxShape = CheckboxShape;
+  public CheckboxSize = CheckboxSize;
 
-  ngAfterViewInit(): void {
-    this._overlaySidePanelService.setContent(DashboardSidePanelComponent);
+  public form: FormGroup;
+
+  constructor(private _formBuilder: FormBuilder) {
+    this.form = this._formBuilder.group({
+      rememberMe: [false]
+    });
   }
 
-  public show(): void {
-    this._overlaySidePanelService.show();
+  ngAfterViewInit(): void {
   }
 }

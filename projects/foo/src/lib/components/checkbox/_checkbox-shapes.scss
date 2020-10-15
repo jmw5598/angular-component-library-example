@@ -1,0 +1,24 @@
+@import '../_shared/scss/variables';
+
+@mixin create-checkbox-shape($radius) {
+  .checkbox{
+    border-radius: $radius;
+    .checkmark {
+      border-radius: $radius;
+    }
+  }
+}
+
+@mixin generate-checkbox-shapes {
+  &.checkbox-shape-square {
+    @include create-checkbox-shape(0);
+  }
+
+  &.checkbox-shape-rounded {
+    @include create-checkbox-shape(4px);
+  }
+
+  &.checkbox-shape-circle {
+    @include create-checkbox-shape(3rem);
+  }
+}

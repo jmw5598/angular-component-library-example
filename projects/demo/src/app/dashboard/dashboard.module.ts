@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
-import { OverlaySidePanelModule, ButtonModule } from 'foo';
+import { CheckboxModule } from 'foo';
 import { DashboardSidePanelComponent } from './components/dashboard-side-panel/dashboard-side-panel.component';
 
 @NgModule({
@@ -14,8 +15,9 @@ import { DashboardSidePanelComponent } from './components/dashboard-side-panel/d
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    OverlaySidePanelModule,
-    ButtonModule
+    CheckboxModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   entryComponents: [
     DashboardSidePanelComponent

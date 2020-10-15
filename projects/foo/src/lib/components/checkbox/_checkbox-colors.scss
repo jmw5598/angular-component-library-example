@@ -1,0 +1,41 @@
+@import '../_shared/scss/variables';
+
+@mixin create-checkbox-color($color) {
+  .checkbox {
+    &.checked {
+      background: $color;
+      &:hover {
+        background: darken($color, 10%);
+      }
+      &:active {
+        background: darken($color, 15%);
+      }
+    }
+  }
+}
+
+@mixin generate-checkbox-colors {
+  &.checkbox-color-primary {
+    @include create-checkbox-color($primary);
+  }
+
+  &.checkbox-color-secondary {
+    @include create-checkbox-color($secondary);
+  }
+
+  &.checkbox-color-success {
+    @include create-checkbox-color($success);
+  }
+
+  &.checkbox-color-info {
+    @include create-checkbox-color($info);
+  }
+
+  &.checkbox-color-warning {
+    @include create-checkbox-color($warning);
+  }
+
+  &.checkbox-color-danger {
+    @include create-checkbox-color($danger);
+  }
+}

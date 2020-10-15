@@ -1,0 +1,18 @@
+@import '../_shared/scss/variables';
+
+@mixin generate-checkbox-label-positions {
+  &.checkbox-label-position-left {
+    flex-direction: row;
+    .checkbox-label {
+      margin-left: 0.25rem;
+    }
+  }
+  
+  &.checkbox-label-position-right {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    .checkbox-label {
+      margin-right: 0.25rem;
+    }
+  }
+}

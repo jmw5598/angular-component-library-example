@@ -56,3 +56,10 @@ export * from './toggle-switch/toggle-switch-size.enum';
 export * from './toggle-switch/toggle-switch.component'
 export * from './toggle-switch/toggle-switch.module';
 
+// Checkbox
+export * from './checkbox/checkbox-color.enum';
+export * from './checkbox/checkbox-label-position.enum';
+export * from './checkbox/checkbox-shape.enum';
+export * from './checkbox/checkbox-size.enum';
+export * from './checkbox/checkbox.component';
+export * from './checkbox/checkbox.module';

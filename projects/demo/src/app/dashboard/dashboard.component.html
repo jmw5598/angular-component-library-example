@@ -1,12 +1,16 @@
 <div style="margin: 2rem;">
   <h1>Dashboard</h1>
   <div style="margin-top: 2rem;">
-    <button fooButton 
-      [color]="ButtonColor.SUCCESS" 
-      [shape]="ButtonShape.PILLED"
-      [style]="ButtonStyle.OUTLINED"
-      [size]="ButtonSize.LARGE"
-      (click)="show()">Show Dashboard Details</button>
+    <form [formGroup]="form" novalidate>
+      <foo-checkbox 
+          formControlName="rememberMe" 
+          label="Remember Me"
+          [color]="CheckboxColor.SUCCESS"></foo-checkbox>
+    </form>
+    <br />
+    <h5>Form Value: </h5>
+    <pre>
+      {{ form.value | json }}
+    </pre>
   </div>
 </div>
-<foo-overlay-side-panel></foo-overlay-side-panel>
